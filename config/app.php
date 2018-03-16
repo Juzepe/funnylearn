@@ -215,7 +215,7 @@ return [
 
         // zizaco
 
-        'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
+        'Entrust'   => Zizaco\Entrust\EntrustFacade::class, 
 
     ],
 

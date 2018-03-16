@@ -43,7 +43,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['permission:Dashboard']], fu
 	
 	Route::resource('/pages', 'Admin\Pages');
 	Route::resource('/car-makers', 'Admin\CarMakers');
-	Route::resource('/car-models', 'Admin\CarModels');
+	Route::resource('/car-models', 'Admin\CarModels');  
 	Route::resource('/cars', 'Admin\Cars');
 	Route::resource('/stores', 'Admin\Stores');
 	Route::resource('/parts', 'Admin\Parts');
