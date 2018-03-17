@@ -19,8 +19,8 @@
 			</li>
         @endability
 
-        <li class="{{ starts_with(Request::path(), 'admin/pages') ? 'active' : '' }}">
-			<a href="{{ url('/admin/pages') }}"><svg class="glyph stroked chain"><use xlink:href="#stroked-chain"/></svg> Pages</a>
+        <li class="{{ starts_with(Request::path(), 'admin/books') ? 'active' : '' }}">
+			<a href="{{ url('/admin/books') }}"><svg class="glyph stroked chain"><use xlink:href="#stroked-chain"/></svg> Books</a>
 		</li>
 	</ul>
 </div><!--/.sidebar-->

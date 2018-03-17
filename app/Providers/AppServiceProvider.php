@@ -24,6 +24,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        if (\App::isLocal()) {
+            \Debugbar::enable();
+        } else {
+            \Debugbar::disable();
+        }
     }
 }
