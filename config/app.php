@@ -164,6 +164,14 @@ return [
 
         Zizaco\Entrust\EntrustServiceProvider::class,
 
+        // yajra
+
+        Yajra\DataTables\DataTablesServiceProvider::class,
+
+        // form
+
+        Collective\Html\HtmlServiceProvider::class,
+
     ],
 
     /*
@@ -216,6 +224,15 @@ return [
         // zizaco
 
         'Entrust'   => Zizaco\Entrust\EntrustFacade::class, 
+
+        // yajra
+
+        'DataTables' => Yajra\DataTables\Facades\DataTables::class,
+
+        // form
+
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
 
     ],
 

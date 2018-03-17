@@ -55,6 +55,9 @@
                                 </div>
                             </li>
                         @endguest
+                        @ability('', 'ManageRights')
+                            <li><a class="nav-link" href="{{ url('admin') }}">Dashboard</a></li>
+                        @endability
                     </ul>
                 </div>
             </div>
