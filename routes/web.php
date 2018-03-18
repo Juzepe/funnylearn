@@ -37,6 +37,12 @@ Route::group(['prefix' => 'admin', 'middleware' => ['permission:ManageMaterials'
 	});
 
 	Route::resource('/books', 'Admin\Books');
+	Route::resource('/lessons', 'Admin\Lessons');
+	Route::resource('/words', 'Admin\Words');
 
 	Route::any('/allbooks', 'Admin\Books@allBooks');
+	Route::any('/alllessons', 'Admin\Lessons@allLessons');
+	Route::any('/allwords', 'Admin\Words@allWords');
+
+	Route::get('/getLessons', 'Admin\Books@getLessons');
 });

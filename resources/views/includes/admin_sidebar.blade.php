@@ -22,5 +22,11 @@
         <li class="{{ starts_with(Request::path(), 'admin/books') ? 'active' : '' }}">
 			<a href="{{ url('/admin/books') }}"><svg class="glyph stroked chain"><use xlink:href="#stroked-chain"/></svg> Books</a>
 		</li>
+        <li class="{{ starts_with(Request::path(), 'admin/lessons') ? 'active' : '' }}">
+			<a href="{{ url('/admin/lessons') }}"><svg class="glyph stroked chain"><use xlink:href="#stroked-chain"/></svg> Lessons</a>
+		</li>
+        <li class="{{ starts_with(Request::path(), 'admin/words') ? 'active' : '' }}">
+			<a href="{{ url('/admin/words') }}"><svg class="glyph stroked chain"><use xlink:href="#stroked-chain"/></svg> Words</a>
+		</li>
 	</ul>
 </div><!--/.sidebar-->

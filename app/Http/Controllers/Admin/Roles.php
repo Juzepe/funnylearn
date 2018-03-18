@@ -103,8 +103,9 @@ class Roles extends Controller
     public function destroy($id)
     {
         // delete
-        $role = Role::find($id);
-        $role->delete();
+        // $role = Role::find($id);
+        // $role->delete();
+        Role::whereId($id)->delete();
 
         // redirect
         Session::flash('message', 'Successfully deleted the role!');
