@@ -11,13 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('main');
-});
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@main');
+
+Route::get('/lesson/{id}', 'LessonController@show');
+Route::get('/lesson/{id}/words', 'LessonController@words');
 
 Route::group(['prefix' => 'admin', 'middleware' => ['permission:ManageMaterials']], function() {
 	Route::get('/', 'Admin\Admin@index');
