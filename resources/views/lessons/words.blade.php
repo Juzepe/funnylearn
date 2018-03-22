@@ -26,7 +26,7 @@
 
 				<div class="column width-6">
 					<div class="field-wrapper">
-						<input id="word-{{$word->id}}" type="text" class="form-lname form-element large" tabindex="2" onkeypress="check()">
+						<input id="word-{{$word->id}}" type="text" class="form-lname form-element large" tabindex="2" onkeypress="check(event)">
 					</div>
 				</div>
 			</div>
@@ -40,7 +40,9 @@
 
 @push('scripts')
 <script>
-	function check() {
+	function check(event) {
+		if (event.keyCode != '13') return;
+
 		var meanings = document.getElementsByClassName('meanings');
 
 		for (var i = meanings.length - 1; i >= 0; i--) {
