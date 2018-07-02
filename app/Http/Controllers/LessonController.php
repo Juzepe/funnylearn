@@ -32,7 +32,7 @@ class LessonController extends Controller
     {
         return view('lessons/words')->with([
             "lesson" => Lesson::find($id),
-            "words" => Word::inRandomOrder()->get(),
+            "words" => Word::where("lesson_id", $id)->inRandomOrder()->get(),
         ]);
     }
 
